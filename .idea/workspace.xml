@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ad0ecbe-1529-4f1f-ada0-35e26960ae5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Hogwarts-16.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/test_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases/test_calculator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="375">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -42,20 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/feature/calculator_my.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cases/test_calculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="31" column="102" lean-forward="true" selection-start-line="31" selection-start-column="102" selection-end-line="31" selection-end-column="102" />
+            <state relative-caret-position="347">
+              <caret line="30" column="106" lean-forward="true" selection-start-line="30" selection-start-column="106" selection-end-line="30" selection-end-column="106" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -96,8 +97,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/service/calculator.py" />
         <option value="$PROJECT_DIR$/test_demo.py" />
-        <option value="$PROJECT_DIR$/cases/test_calculator.py" />
         <option value="$PROJECT_DIR$/service/feature/calculator_my.py" />
+        <option value="$PROJECT_DIR$/cases/test_calculator.py" />
       </list>
     </option>
   </component>
@@ -286,6 +287,7 @@
       <updated>1607516284297</updated>
       <workItem from="1607516285650" duration="2273000" />
       <workItem from="1607689890291" duration="5673000" />
+      <workItem from="1607762163853" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="1、新建霍格沃兹厕所开发工程">
       <created>1607516488638</created>
@@ -298,9 +300,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_calculator_TestCalculator_test_calculator - 2020.12.11 at 21h 55m 13s.xml">
-      <configuration name="pytest for test_calculator.TestCalculator.test_calculator" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_calculator_TestCalculator_test_calculator - 2020.12.11 at 21h 55m 26s.xml">
       <configuration name="pytest for test_calculator.TestCalculator.test_calculator" configurationId="tests" />
     </history-entry>
@@ -328,15 +327,18 @@
     <history-entry file="pytest_for_test_calculator_TestCalculator - 2020.12.11 at 22h 02m 42s.xml">
       <configuration name="pytest for test_calculator.TestCalculator" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_calculator_TestCalculator - 2020.12.12 at 16h 36m 22s.xml">
+      <configuration name="pytest for test_calculator.TestCalculator" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7946000" />
+    <option name="totallyTimeSpent" value="7978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,7 +373,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_for_test_demo_TestHogwarts_test_add.coverage" NAME="pytest for test_demo.TestHogwarts.test_add Coverage Results" MODIFIED="1607518130405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hogwarts_16$calculator_my.coverage" NAME="calculator_my Coverage Results" MODIFIED="1607694981380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service/feature" />
-    <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_for_test_calculator_TestCalculator.coverage" NAME="pytest for test_calculator.TestCalculator Coverage Results" MODIFIED="1607695361846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_for_test_calculator_TestCalculator.coverage" NAME="pytest for test_calculator.TestCalculator Coverage Results" MODIFIED="1607762181748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
     <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_in_test_demo_py.coverage" NAME="pytest in test_demo.py Coverage Results" MODIFIED="1607518232653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_for_test_demo_TestHogwarts_test_two.coverage" NAME="pytest for test_demo.TestHogwarts.test_two Coverage Results" MODIFIED="1607518703050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_for_test_calculator_TestCalculator_test_calculator.coverage" NAME="pytest for test_calculator.TestCalculator.test_calculator Coverage Results" MODIFIED="1607695291598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
@@ -379,16 +381,6 @@
     <SUITE FILE_PATH="coverage/Hogwarts_16$pytest_for_test_calculator_TestCalculator_test_add.coverage" NAME="pytest for test_calculator.TestCalculator.test_add Coverage Results" MODIFIED="1607694157885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="50">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/_pytest/mark/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -399,20 +391,20 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/pytest/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="50">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cases/test_calculator.py">
+    <entry file="file://$PROJECT_DIR$/test_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="31" column="102" lean-forward="true" selection-start-line="31" selection-start-column="102" selection-end-line="31" selection-end-column="102" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -426,7 +418,17 @@
     <entry file="file://$PROJECT_DIR$/service/feature/calculator_my.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cases/test_calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="30" column="106" lean-forward="true" selection-start-line="30" selection-start-column="106" selection-end-line="30" selection-end-column="106" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

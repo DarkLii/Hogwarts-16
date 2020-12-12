@@ -16,12 +16,10 @@ class TestCalculator:
         print("\nStart Run: teardown_class")
 
     def setup(self):
-        # print("Start Run: setup")
-        pass
+        print("Start Run: setup")
 
     def teardown(self):
-        # print("Start Run: teardown")
-        pass
+        print("Start Run: teardown")
 
     # 入参
     params_add = [
