@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import os
 import yaml
-import json
 import pytest
 
 
@@ -33,12 +33,14 @@ def format_data(data):
         print("请输入 dict 类型数据")
 
 
-def get_case_params(path):
+def get_case_params(file_name):
     """
     获取 test case 参数化数据
-    :param path: yaml文件路径
+    :param path: yaml文件名
     :return: pytest 参数化列表数据
     """
+    data_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))  # 工程根目录
+    path = os.path.join(data_path, "data", file_name)
 
     data = get_data(path)
     params_list = format_data(data)

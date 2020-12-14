@@ -17,18 +17,20 @@ class TestCalculator:
         print("\nStart Run: teardown_class")
 
     def setup(self):
-        print("Start Run: setup")
+        print("\nStart Run: setup")
 
     def teardown(self):
-        print("Start Run: teardown")
+        print("\nStart Run: teardown")
 
-    path = "E:\myAllProject\\autoTestFrame\Hogwarts-16\data\data_drive\data_calculator.yml"
+    path = "data_calculator.yml"  # data 目录下 yaml 文件名
     params_list = get_case_params(path)
 
     @pytest.mark.parametrize("params", params_list)
     def test_calculator(self, params):
         """ 测试计算器 + - * / 功能用例 """
+
         operator = params["operator"]
+
         if operator == "+":
             assert self.calcu.add(params["a"], params["b"]) == params["expected"]
         elif operator == "-":
