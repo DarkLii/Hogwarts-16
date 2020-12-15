@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 
 import pytest
-from service.calculator import Calculator
 from service.common.common import *
+from service.calculator import Calculator
 
 
 class TestCalculator:
@@ -16,17 +16,12 @@ class TestCalculator:
     def teardown_class(cls):
         print("\nStart Run: teardown_class")
 
-    def setup(self):
-        print("\nStart Run: setup")
-
-    def teardown(self):
-        print("\nStart Run: teardown")
-
     path = "data_calculator.yml"  # data 目录下 yaml 文件名
     params_list = get_case_params(path)
 
+    @pytest.mark.run(order=2)
     @pytest.mark.parametrize("params", params_list)
-    def test_calculator(self, params):
+    def test_calculator(self, params, test_case_fixture):
         """ 测试计算器 + - * / 功能用例 """
 
         operator = params["operator"]
@@ -39,3 +34,8 @@ class TestCalculator:
             assert self.calcu.mul(params["a"], params["b"]) == params["expected"]
         elif operator == "/":
             assert self.calcu.div(params["a"], params["b"]) == params["expected"]
+
+    @pytest.mark.run(order=1)
+    def test_one(self):
+        print("第一个运行的测试用例")
+        pass
