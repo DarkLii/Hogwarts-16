@@ -73,14 +73,6 @@ class PytestAllure:
         """
         case_path_list = []
 
-        # if run_case.upper() == "ALL":
-        #     [case_path_list.extend(case_config.get(case_path)) for case_path in case_config.keys() if
-        #      case_config.get(case_path)]
-        # else:
-        #     case_path_list = case_config.get(run_case, None)
-        # if not case_path_list:
-        #     raise Exception(f"根据：{run_case} 没有找到对应的自动化用例")
-
         case_path_list.append(run_case)
         case_list = []
         for case_path in case_path_list:
