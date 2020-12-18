@@ -25,6 +25,11 @@ class TestWework:
         opt.debugger_address = "127.0.0.1:9222"
         cls.driver = webdriver.Chrome(options=opt)
         cls.driver.implicitly_wait(10)
+        cls.driver.get("https://work.weixin.qq.com/wework_admin/loginpage_wx?")
+        with open("data.yaml", encoding="UTF-8") as f:
+            yaml_data = yaml.safe_load(f)
+            for cookie in yaml_data:
+                cls.driver.add_cookie(cookie)
 
     @classmethod
     def teardown_class(cls):
@@ -38,21 +43,15 @@ class TestWework:
         print("\nStart Run: teardown")
 
     # 获取cookie，序列化后存入yaml文件内
-    def test_get_cookie(self):
-        self.driver.get("https://work.weixin.qq.com/wework_admin/frame#contacts")
-        cookie = self.driver.get_cookies()
-        print(cookie)
-        with open("data.yaml", "w", encoding="UTF-8") as f:
-            yaml.dump(cookie, f)
+    # def test_get_cookie(self):
+    #     self.driver.get("https://work.weixin.qq.com/wework_admin/frame#contacts")
+    #     cookie = self.driver.get_cookies()
+    #     print(cookie)
+    #     with open("data.yaml", "w", encoding="UTF-8") as f:
+    #         yaml.dump(cookie, f)
 
     # 使用序列化cookie的方法进行登录
-    def test_login(self):
-        self.driver.get("https://work.weixin.qq.com/wework_admin/loginpage_wx?")
-        with open("data.yaml", encoding="UTF-8") as f:
-            yaml_data = yaml.safe_load(f)
-            for cookie in yaml_data:
-                self.driver.add_cookie(cookie)
-
+    def test_add_members(self):
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
         self.driver.find_element_by_id("menu_contacts").click()
 
