@@ -43,12 +43,12 @@ class TestWework:
         print("\nStart Run: teardown")
 
     # 获取cookie，序列化后存入yaml文件内
-    # def test_get_cookie(self):
-    #     self.driver.get("https://work.weixin.qq.com/wework_admin/frame#contacts")
-    #     cookie = self.driver.get_cookies()
-    #     print(cookie)
-    #     with open("data.yaml", "w", encoding="UTF-8") as f:
-    #         yaml.dump(cookie, f)
+    def test_get_cookie(self):
+        self.driver.get("https://work.weixin.qq.com/wework_admin/frame#contacts")
+        cookie = self.driver.get_cookies()
+        print(cookie)
+        with open("data.yaml", "w", encoding="UTF-8") as f:
+            yaml.dump(cookie, f)
 
     # 使用序列化cookie的方法进行登录
     def test_add_members(self):
