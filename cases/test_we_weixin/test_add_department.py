@@ -21,5 +21,5 @@ class TestAddDepartment:
         :return:
         """
         # 1.跳转添加成员页面  2. 添加成员 3. 自动跳转到通讯录页面
-        res = self.main.goto_contact().goto_add_department().add_department_seccess()
-        assert "赫敏2" in res
+        res = self.main.goto_contact().goto_add_department().add_department_seccess().get_department()
+        assert "一级部门" in res

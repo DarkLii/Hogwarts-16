@@ -12,7 +12,9 @@ class ContactPage(BasePage):
     _location_member_list = (By.CSS_SELECTOR, ".member_colRight_memberTable_td:nth-child(2)")
     _location_goto_add_member = (By.CSS_SELECTOR, ".ww_operationBar .js_add_member")
     _location_add = (By.CSS_SELECTOR, ".member_colLeft_top_addBtn")
-    _location_add_department = (By.CSS_SELECTOR, ".qui_btn .ww_btn .ww_btn_Blue")
+    _location_add_department = (By.CSS_SELECTOR, ".js_create_party")
+    _location_get_department = (By.CSS_SELECTOR, ".jstree-icon.jstree-themeicon")
+
 
     def goto_add_member(self):
         # 解决循环导入的问题
@@ -48,3 +50,13 @@ class ContactPage(BasePage):
         self.find(self._location_add_department).click()
 
         return AddDepartment(self.driver)
+
+    def get_department(self):
+        """
+        获取一级部门
+        :return:
+        """
+        res = self.find(self._location_get_department)
+        return res
+
+
