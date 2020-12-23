@@ -13,7 +13,8 @@ class ContactPage(BasePage):
     _location_goto_add_member = (By.CSS_SELECTOR, ".ww_operationBar .js_add_member")
     _location_add = (By.CSS_SELECTOR, ".member_colLeft_top_addBtn")
     _location_add_department = (By.CSS_SELECTOR, ".js_create_party")
-    _location_get_department = (By.CSS_SELECTOR, ".jstree-icon.jstree-themeicon")
+    _location_get_department = (By.CSS_SELECTOR, ".jstree-children")
+    _location_delete_department = (By.CSS_SELECTOR, ".icon.jstree-contextmenu-hover")
 
 
     def goto_add_member(self):
@@ -56,7 +57,17 @@ class ContactPage(BasePage):
         获取一级部门
         :return:
         """
-        res = self.find(self._location_get_department)
-        return res
+        sleep(2)
+        return self.find(self._location_get_department).text
+
+    def delete_department(self):
+        """
+        获取一级部门
+        :return:
+        """
+
+        # self.finds(self._location_delete_department).click()
+        a = self.finds(self._location_delete_department)[1].click()
+        pass
 
 
