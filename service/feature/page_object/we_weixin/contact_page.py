@@ -62,7 +62,7 @@ class ContactPage(BasePage):
 
     def delete_department(self):
         """
-        获取一级部门
+        刪除一级部门
         :return:
         """
 
