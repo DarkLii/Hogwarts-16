@@ -33,6 +33,6 @@ class TestWeWeiXin:
                                                                'scrollIntoView(new UiSelector().'
                                                                'text("打卡").instance(0));').click()
         self.driver.find_element(MobileBy.XPATH, "//*[@text='外出打卡']").click()
-        self.driver.find_element(MobileBy.XPATH, "//*[contains(@text, '次外出']").click()
+        self.driver.find_element(MobileBy.XPATH, "//*[contains(@text,'次外出')]").click()
         WebDriverWait(self.driver, 10).until(lambda x: "外出打卡成功" in x.page_source)
         assert "外出打卡成功" in self.driver.page_source
