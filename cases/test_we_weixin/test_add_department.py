@@ -2,7 +2,7 @@
 
 import pytest
 
-from service.feature.page_object.we_weixin.main_page import MainPage
+from service.feature.selenium_po.we_weixin.main_page import MainPage
 
 
 class TestAddDepartment:

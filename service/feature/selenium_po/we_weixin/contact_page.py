@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from service.feature.page_object.we_weixin.base_page import BasePage
+from service.feature.selenium_po.we_weixin.base_page import BasePage
 
 
 class ContactPage(BasePage):
@@ -19,7 +19,7 @@ class ContactPage(BasePage):
 
     def goto_add_member(self):
         # 解决循环导入的问题
-        from service.feature.page_object.we_weixin.add_member_page import AddMember
+        from service.feature.selenium_po.we_weixin.add_member_page import AddMember
         """
         添加成员操作
         :return:
@@ -41,7 +41,7 @@ class ContactPage(BasePage):
 
     def goto_add_department(self):
         # 解决循环导入的问题
-        from service.feature.page_object.we_weixin.add_department_page import AddDepartment
+        from service.feature.selenium_po.we_weixin.add_department_page import AddDepartment
         """
         添加部门操作
         :return:

@@ -3,8 +3,8 @@
 from time import sleep
 from selenium.webdriver.common.by import By
 
-from service.feature.page_object.we_weixin.base_page import BasePage
-from service.feature.page_object.we_weixin.contact_page import ContactPage
+from service.feature.selenium_po.we_weixin.base_page import BasePage
+from service.feature.selenium_po.we_weixin.contact_page import ContactPage
 
 
 class AddDepartment(BasePage):
