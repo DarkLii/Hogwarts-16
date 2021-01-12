@@ -16,8 +16,8 @@ class TestAddDepartment:
         pass
 
     def teardown_class(self):
-        # 第一次实例化
-        # self.main.quit()
+        # 退出浏览器
+        self.main.quit()
         pass
 
     def test_add_department(self):

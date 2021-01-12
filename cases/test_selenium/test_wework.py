@@ -1,12 +1,13 @@
 # -*- coding:utf-8 -*-
 
-
+import os
 import pytest
 import time
 import yaml
 import shutil
 import subprocess
 from selenium import webdriver
+from service.common.common import *
 from selenium.webdriver.common.by import By
 
 
@@ -21,15 +22,21 @@ class TestWework:
         # time.sleep(10)
 
         opt = webdriver.ChromeOptions()
+        # 当 Chrome 未安装在默认路径时，需指定 chrome.exe 的路径，否则会报错：selenium.common.exceptions.WebDriverException: Message: unknown error: cannot find Chrome binary
+        chrome_path = "E:\Program Files\Google\Chrome\Application\chrome.exe"
+        if os.path.exists(chrome_path):
+            opt.binary_location = chrome_path
+
+        # 需启动 chrome 远程调试端口(需添加 chrome.exe 环境变量)，cmd 执行：chrome
         # 设置debug地址
         opt.debugger_address = "127.0.0.1:9222"
-        cls.driver = webdriver.Chrome(options=opt)
+        cls.driver = webdriver.Chrome(chrome_options=opt)
         cls.driver.implicitly_wait(10)
-        cls.driver.get("https://work.weixin.qq.com/wework_admin/loginpage_wx?")
-        with open("data.yaml", encoding="UTF-8") as f:
-            yaml_data = yaml.safe_load(f)
-            for cookie in yaml_data:
-                cls.driver.add_cookie(cookie)
+        # cls.driver.get("https://work.weixin.qq.com/wework_admin/loginpage_wx?")
+        # with open(we_weixin_login_cookie_file_path(), encoding="UTF-8") as f:
+        #     yaml_data = yaml.safe_load(f)
+        #     for cookie in yaml_data:
+        #         cls.driver.add_cookie(cookie)
 
     @classmethod
     def teardown_class(cls):
@@ -47,7 +54,7 @@ class TestWework:
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame#contacts")
         cookie = self.driver.get_cookies()
         print(cookie)
-        with open("data.yaml", "w", encoding="UTF-8") as f:
+        with open(we_weixin_login_cookie_file_path(), "w", encoding="UTF-8") as f:
             yaml.dump(cookie, f)
 
     # 使用序列化cookie的方法进行登录
