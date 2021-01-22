@@ -23,6 +23,7 @@ class Logger(logging.Logger):
         "CRITICAL": logging.CRITICAL
     }
 
+    # 单例模式
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, "_instance"):
             with threading.Lock():  # 多线程加锁
@@ -30,7 +31,7 @@ class Logger(logging.Logger):
         return cls._instance
 
     def __init__(self, level='info', output_console=True, output_file=False,
-                 console_log_color=False, when='D', backCount=10, filename='test_log.log',
+                 console_log_color=True, when='D', backCount=10, filename='test_log.log',
                  format='[%(asctime)s] - [%(levelname)8s] - [thread:%(thread)s]-[process:%(process)s]: %(message)s'):
 
         super(Logger, self).__init__(self)
@@ -238,35 +239,38 @@ def log_wrapper(func):
 
 
 if __name__ == '__main__':
+    # 单例模式
     print(f'Print: {id(Printf("Print 日志 1"))}')
     print(f'Print: {id(Printf("Print 日志 2"))}')
     print(f'Print: {id(Printf("Print 日志 3"))}')
 
-    log = Logger(level='debug', console_log_color=True)
+    # 单例模式
+    log_debug = Logger(level='debug', console_log_color=True)
+    print(f"log_debug   id：{id(log_debug)}")
+    log_info = Logger(level='info', console_log_color=True)
+    print(f"log_info    id：{id(log_info)}")
+    log_warning = Logger(level='warning', console_log_color=True)
+    print(f"log_warning id：{id(log_warning)}")
+    log_error = Logger(level='error', console_log_color=True)
+    print(f"log_error   id：{id(log_error)}")
+
+    # 只输出当前级别及其之上的日志
+    # log = Logger(level='debug', console_log_color=True)
+    log = Logger(level='info', console_log_color=True)
     log.debug('debug')
-    print(id(log))
-    log = Logger(level='debug', console_log_color=True)
     log.info('info')
-    print(id(log))
-    log = Logger(level='debug', console_log_color=True)
     log.warning('warning')
-    print(id(log))
-    log = Logger(level='debug', console_log_color=True)
     log.error('error')
-    print(id(log))
-    log = Logger(level='debug', console_log_color=True)
     try:
         raise ValueError('An error happend !')
     except ValueError as e:
-        log.exception('exception')
-    print(id(log))
-    log = Logger(level='debug', console_log_color=True)
+        log.exception(e)
     log.critical('critical')
-    print(id(log))
 
+    # # 并发多实例运行
     # def task():
-    #     obj = Logger(level='debug', console_log_color=True)
-    #     print(id(obj))
+    #     log = Logger(level="debug", console_log_color=True)
+    #     print(id(log))
     #
     #
     # for i in range(10):
