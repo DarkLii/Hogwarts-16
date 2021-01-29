@@ -13,7 +13,7 @@ from logging import handlers
 from pytest_allure.utiles.timer import cur_datetime_ms
 
 
-class Logger(logging.Logger):
+class Logger:
     # 日志级别映射
     level_relations = {
         "DEBUG": logging.DEBUG,
@@ -34,7 +34,7 @@ class Logger(logging.Logger):
                  console_log_color=True, when='D', backCount=10, filename='test_log.log',
                  format='[%(asctime)s] - [%(levelname)8s] - [thread:%(thread)s]-[process:%(process)s]: %(message)s'):
 
-        super(Logger, self).__init__(self)
+        # super(Logger, self).__init__(self)
         # format = '[%(asctime)s] - [%(levelname)8s] - [thread:%(thread)s]-[process:%(process)s] - "%(pathname)s:%(lineno)d": %(message)s'
         self.format = format
         self.output_console = output_console
@@ -159,7 +159,7 @@ class AllureLog:
     def __init__(self):
         pass
 
-    def _init_title(self, title):
+    def __init_title(self, title):
         """
         记录日志时间
         :param title: 日志抬头
@@ -175,16 +175,20 @@ class AllureLog:
         :param message: 日志内容
         :return:
         """
-        title = self._init_title(title)
+        title = self.__init_title(title)
         if format:
             try:
                 message = str(message) if isinstance(message, set) else message
-                message = message if not isinstance(message, (dict, list, tuple)) else json.dumps(message,
-                                                                                                  ensure_ascii=False)
-            except Exception as e:
+                message = message if not isinstance(message, (dict, list, tuple)) \
+                    else json.dumps(message, ensure_ascii=False)
+            except Exception as error:
                 message = str(message)
+                print(error)
 
         allure.attach(message, title, allure.attachment_type.TEXT)
+
+        # allure.attach("<body>这是一个网页</body>", name="HTML测试模块", attachment_type=allure.attachment_type.HTML)  # 添加网页
+        # allure.attach.file("./picture/xxx.jpg", name="这是一个图片", attachment_type=allure.attachment_type.JPG)  # 添加图片
 
 
 class Printf:
